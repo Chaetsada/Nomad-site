@@ -3,6 +3,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { testimonialsImages as images } from '../libs/data';
 import { BsFillChatSquareQuoteFill } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
 
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
@@ -11,15 +12,12 @@ import Image from 'next/image';
 
 const Testimonial = () => {
   return (
-    <div className='min-h-[80vh]'>
-      <div className='flex flex-col gap-5 items-center mb-5'>
-        <h2 className='text-4xl md:text-6xl font-bold text-primary-100'>Testimonials</h2>
-        <p className='text-xl'>What clients are saying</p>
-      </div>
+    <div className='h-[60vh] py-10 bg-secondary-100'>
+     
       <Swiper
           pagination={{ dynamicBullets: true }}
           modules={[Pagination]}
-          className="h-[600px] w-full max-w-5xl mx-auto"
+          className="h-full w-full max-w-5xl mx-auto"
         >
           {images.map((item)=>(
             <SwiperSlide key={item.name} className='h-full w-full flex flex-col justify-center items-center pt-[130px] px-5 md:px-[100px] hover:cursor-grab'>

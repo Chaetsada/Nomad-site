@@ -1,6 +1,7 @@
 
 import Features from "./Components/Features";
 import Header from "./Components/Header";
+import Newsletter from "./Components/Newsletter";
 import Popular from "./Components/Popular";
 import Testimonial from "./Components/Testimonial";
 
@@ -11,6 +12,7 @@ export default function Home() {
         <Features/>
         <Popular />
         <Testimonial/>
+        <Newsletter/>
       </div>
   );
 }
