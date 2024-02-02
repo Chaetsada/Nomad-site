@@ -23,7 +23,7 @@ const Features = () => {
       clearTimeout(timeOutRef.current)
     }
   }
-
+  
   useEffect(()=>{
     resetTimeout();
     timeOutRef.current = setTimeout(()=>{
@@ -31,13 +31,11 @@ const Features = () => {
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
     },delay);
-    return ()=>{
-      resetTimeout();
-    };
+  
   },[index])
   
   return (
-    <main className="min-h-screen mb-20 md:mb-0">
+    <main className="min-h-fit md:h-screen mb-20 md:mb-0">
       <div className="container px-5">
         <header className="mb-14">
           <span className="text-primary-100 block mb-5">What’s included?</span>
@@ -50,7 +48,7 @@ const Features = () => {
             </Link>
         </header>
         {/* IMAGE SLIDER */}
-        <section className="w-full h-[120vh] md:h-fit  relative bg-blue-200">
+        <section className="w-full h-[120vh] md:h-fit  relative ">
           <div className="hidden lg:block w-full h-[700px] rounded-2xl overflow-hidden relative">
             <Image 
               className="object-cover" 

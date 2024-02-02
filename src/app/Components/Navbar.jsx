@@ -20,25 +20,25 @@ const Navbar = () => {
         <ul className="flex flex-col items-center justify-center gap-10 pb-32">
           <li className="flex items-center justify-center gap-5 group">
             <FaArrowRight className="hidden md:block -translate-x-4 opacity-0 w-12 h-12 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0" />
-            <Link className="text-4xl md:text-7xl font-bold" href="/">
+            <Link className="text-5xl md:text-7xl font-bold" href="/about" onClick={()=>setOpen(!open)}>
               About
             </Link>
           </li>
           <li className="flex items-center justify-center gap-5 group">
             <FaArrowRight className="hidden md:block -translate-x-4 opacity-0 w-12 h-12 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0" />
-            <Link className="text-4xl md:text-7xl font-bold" href="/">
+            <Link className="text-5xl md:text-7xl font-bold" href="/destinations" onClick={()=>setOpen(!open)}>
               Destinations
             </Link>
           </li>
           <li className="flex items-center justify-center gap-5 group">
             <FaArrowRight className="hidden md:block -translate-x-4 opacity-0 w-12 h-12 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0" />
-            <Link className="text-4xl md:text-7xl font-bold" href="/">
+            <Link className="text-5xl md:text-7xl font-bold" href="/FAQ" onClick={()=>setOpen(!open)}>
               FAQs
             </Link>
           </li>
           <li className="flex items-center justify-center gap-5 group">
             <FaArrowRight className="hidden md:block -translate-x-4 opacity-0 w-12 h-12 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0" />
-            <Link className="text-4xl md:text-7xl font-bold" href="/">
+            <Link className="text-5xl md:text-7xl font-bold" href="/contact" onClick={()=>setOpen(!open)}>
               Contact
             </Link>
           </li>

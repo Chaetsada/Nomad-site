@@ -24,7 +24,7 @@ const Newsletter = () => {
                 <h4 className='text-3xl text-center md:text-5xl font-bold text-primary-100 mb-5'>Subscribe to our Newsletter.</h4>
                 <p className='md:text-xl text-primary-100 max-w-4xl text-center mb-10'>Join a group of like-minded digital nomads working and traveling the world together. Get updates on new deals and discounts for every destination.</p>
                 <div className='flex flex-col md:flex-row gap-3'>
-                    <input className='px-5 py-4 rounded-md max-w-[350px] outline-none' type="email" placeholder='Enter your email'/>
+                    <input className='px-5 py-4 rounded-md w-full md:w-[400px] outline-none' type="email" placeholder='Enter your email'/>
                     <button className='px-5 py-4 w-full md:w-fit text-white bg-primary-100 font-bold rounded-md hover:opacity-80 active:scale-90'>Subscribe</button>
                 </div>
                 {/* STAT */}

@@ -11,7 +11,7 @@ import SwiperButton from "./SwiperButton";
 const Header = () => {
   return (
     <div className="h-screen ">
-      <div className="pt-[150px] pb-[80px] container px-5 h-full">
+      <div className="pt-[130px] pb-[80px] container px-5 h-full">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
