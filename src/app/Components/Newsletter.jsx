@@ -15,14 +15,14 @@ const animVarient = {
 
 const Newsletter = () => {
   return (
-    <main className="h-[90vh]">
-      <div className="container h-full flex justify-center items-center px-5">
-        <div className="h-fit w-full px-5 py-20 md:py-32 flex flex-col justify-center items-center bg-secondary-100 rounded-2xl relative">
+    <main className="h-[60vh] md:h-[920px] px-5 ">
+      <div className="container h-full grid place-items-center">
+        <div className="h-fit w-full px-6 py-10 md:py-32 flex flex-col justify-center items-center bg-secondary-100 rounded-2xl relative">
           <span className="text-primary-100 font-semibold mb-5">comunity</span>
           <h4 className="text-3xl text-center md:text-5xl font-bold text-primary-100 mb-5">
             Subscribe to our Newsletter.
           </h4>
-          <p className="md:text-xl text-primary-100 max-w-4xl text-center mb-10">
+          <p className=" md:text-xl text-primary-100 md:max-w-4xl text-center mb-10 ">
             Join a group of like-minded digital nomads working and traveling the
             world together. Get updates on new deals and discounts for every
             destination.

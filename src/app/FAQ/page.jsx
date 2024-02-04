@@ -21,13 +21,13 @@ const FAQ = () => {
           </div>
         </header>
         <section className="mt-20">
-          <div>
+          <div className="px-5">
             {accordionData.map(({id,title,content})=>(
               <Accordion key={id} title={title} content={content} />
             ))}
           </div>
         </section>
-        <div className="mt-20">
+        <div className="mt-20 px-5">
           <div className="flex flex-col gap-3 mb-5">
             <h4 className="text-3xl font-bold">Have more questions?</h4>
             <p className="text-xl">Feel free to contact us or leave us a message.</p>

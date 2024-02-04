@@ -36,8 +36,8 @@ const Features = () => {
   },[index])
   
   return (
-    <div className="min-h-fit ">
-      <div className="container px-5 md:pb-[100px]">
+    <div className="min-h-screen">
+      <div className="container px-5  md:pb-[100px]">
         <header className="mb-14">
           <span className="text-primary-100 block mb-5">What’s included?</span>
           <h2 className="text-primary-100 text-4xl font-cal md:text-6xl font-bold mb-8">Work remotely. Travel the world.</h2>
@@ -47,14 +47,14 @@ const Features = () => {
             </Link>
         </header>
         {/* IMAGE SLIDER */}
-        <section className="w-full h-[120vh] md:h-fit  relative ">
-          <div className="hidden lg:block w-full h-[700px] rounded-2xl overflow-hidden relative">
-            <Image 
-              className="object-cover" 
-              src={images[index]}  
-              alt="features-image" 
-              fill 
-            />           
+        <section className="w-full h-[120vh] md:h-fit relative ">
+            <div className="hidden md:block w-full h-[700px] rounded-2xl overflow-hidden relative">
+              <Image 
+                className="object-cover" 
+                src={images[index]}  
+                alt="features-image" 
+                fill 
+              />           
             </div>
             <div className="absolute top-0 w-full h-full md:grid md:grid-cols-2 lg:grid-cols-4 lg:place-content-end lg:p-5 gap-4 ">
               {/* GRID CONTENT - ACCOMMODATIONS */}
@@ -118,7 +118,7 @@ const Features = () => {
                 </div>
               </div>
             </div>
-          </section>
+        </section>
       </div>
     </div>
   );

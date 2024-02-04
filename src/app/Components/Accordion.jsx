@@ -12,9 +12,9 @@ const Accordion = ({ title,content }) => {
         onClick={()=>setIsActive(!isActive)}
         >
         <div className="flex items-center justify-between">
-            <h3 className="text-3xl font-bold mb-6">{title}</h3>
-            <div className={` w-14 h-14 rounded-full bg-black flex justify-center items-center invisible group-hover:visible`}>
-              <IoIosArrowUp className={` text-white w-5 h-5 transition-all duration-300 hidden group-hover:block ${isActive ? "rotate-[180deg]" : null}`} />
+            <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-6">{title}</h3>
+            <div className={`w-14 h-14  rounded-md md:rounded-full bg-black flex justify-center items-center invisible md:group-hover:visible`}>
+              <IoIosArrowUp className={` text-white w-6 h-6 transition-all duration-300 hidden group-hover:block ${isActive ? "rotate-[180deg]" : null}`} />
             </div>
         </div>
       <p className={` text-xl max-w-7xl ${isActive ? "block" : "hidden"} `}>{content}</p>
