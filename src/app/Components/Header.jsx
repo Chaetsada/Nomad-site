@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 //import data
-import { headerImages as images } from "../libs/data";
+import { headerImages as images } from "../Utils/data";
 //import swiper js
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -37,7 +37,7 @@ const Header = () => {
           <div className="w-full h-full absolute top-0 left-0 z-10 rounded-2xl bg-gradient-to-t from-[#0009] to-[#0000]" />
 
           <div className="absolute bottom-20 left-10 z-20 flex flex-col gap-5">
-            <h2 className="text-white text-3xl md:text-6xl font-bold">
+            <h2 className="text-white text-3xl font-cal md:text-6xl font-bold">
               Work from anywhere.
             </h2>
             <p className="text-white md:text-xl max-w-2xl">

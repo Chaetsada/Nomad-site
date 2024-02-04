@@ -1,9 +1,239 @@
-import React from 'react'
+import Image from "next/image";
+import React from "react";
+//import component
+import Newsletter from "@/app/Components/Newsletter";
+//import icon
+import { FaRegSmile } from "react-icons/fa";
+import { MdOutlineWbSunny } from "react-icons/md";
+import { IoTimeOutline } from "react-icons/io5";
+import { PiMoneyLight } from "react-icons/pi";
+import { TbArrowsCross } from "react-icons/tb";
+import { FiCreditCard } from "react-icons/fi";
 
-const page = () => {
+const imageUrl = [
+  "https://images.unsplash.com/photo-1588993608283-7f0eda4438be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1520950237264-dfe336995c34?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
+
+const Austin = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="min-h-screen bg-main">
+      <div className="container pt-[110px] px-5 mb-20">
+        <header className="h-[720px] w-full mb-10 relative rounded-2xl overflow-hidden ">
+          <Image
+            className="w-full h-full object-cover "
+            src={imageUrl[0]}
+            alt="texas-image"
+            fill
+          />
+          <div className="absolute bottom-0 z-10 p-5 md:p-20 text-white flex flex-col gap-5 bg-gradient-to-t from-[#0005] to-[#0000]">
+            <h3 className="text-4xl md:text-6xl font-bold ">Austin, Texas</h3>
+            <p className="text-xl font-semibold">
+              Next trip: <span>Jun 1, 2023 - Jun 7, 2023</span>
+            </p>
+          </div>
+        </header>
 
-export default page
+        <section className="grid md:grid-cols-4 gap-5 h-fit md:h-[180px] mt-[100px]">
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <FaRegSmile className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>National Language</p>
+              <span className="text-xl font-bold text-black">English</span>
+            </div>
+          </div>
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <MdOutlineWbSunny className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>Weather</p>
+              <span className="text-xl font-bold text-black">
+                85° F / 51° F
+              </span>
+            </div>
+          </div>
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <IoTimeOutline className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>Time zone</p>
+              <span className="text-xl font-bold text-black">GMT-5</span>
+            </div>
+          </div>
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <PiMoneyLight className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>Currency</p>
+              <span className="text-xl font-bold text-black">U.S. Dollar</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row gap-14 mt-[100px] relative">
+          <div className="flex-1 min-h-fit mb-10">
+            <div className="flex flex-col gap-10">
+              <h3 className="text-5xl font-bold font-cal ">Infomation</h3>
+              <p className=" md:text-xl ">
+                Austin, Texas, often referred to as the "Live Music Capital of
+                the World," is a vibrant and culturally rich city located in the
+                heart of the Lone Star State. Known for its laid-back
+                atmosphere, thriving music scene, and progressive outlook,
+                Austin has become a magnet for artists, musicians, and tech
+                entrepreneurs alike.
+              </p>
+            </div>
+            {/* RECOMMENDED ACTIVITIES */}
+            <div className="mt-20 ">
+              <h4 className="text-4xl font-bold mb-10 font-cal">
+                Recommended Activities
+              </h4>
+              <div className="h-[480px] w-full relative rounded-2xl overflow-hidden">
+                <Image
+                  className="w-full h-full object-cover"
+                  src={imageUrl[1]}
+                  alt="texas-image"
+                  fill
+                />
+              </div>
+              <ol className="list-decimal space-y-5 mt-10 px-5">
+                <li className="md:text-xl">
+                  <b> Barbecue</b>: Austin is famous for its barbecue, so make
+                  sure to try some mouthwatering smoked meats like brisket,
+                  ribs, and sausages.
+                </li>
+                <li className="md:text-xl">
+                  <b> Food trucks</b>: Austin has a thriving food truck scene,
+                  offering a diverse range of cuisines. Visit food truck parks
+                  like South Congress Avenue or Rainey Street to sample
+                  everything from gourmet burgers and tacos to Korean barbecue
+                  and vegan fare.
+                </li>
+                <li className="md:text-xl">
+                  <b> Craft beer and local brews</b>: Visit breweries like
+                  Jester King Brewery, Austin Beerworks, or Hops & Grain Brewery
+                  to taste a wide variety of locally brewed beers.
+                </li>
+                <li className="md:text-xl">
+                  <b>Kolaches</b>:Try some delicious Czech pastries known as
+                  kolaches. These sweet or savory pastries are filled with
+                  ingredients like fruit, cheese, sausage, or jalapeños.
+                </li>
+                <li className="md:text-xl">
+                  <b>Sweet treats</b>: Amy's Ice Creams offers unique ice cream
+                  flavors and allows you to customize your treats with mix-ins.
+                  Gourdough's Public House is famous for its over-the-top,
+                  indulgent doughnuts.
+                </li>
+              </ol>
+            </div>
+            {/* MUST TRY FOOD */}
+            <div className="mt-20">
+              <h4 className="text-4xl font-bold mb-10 font-cal">
+                Must-try food
+              </h4>
+              <div className="h-[480px] w-full relative rounded-2xl overflow-hidden">
+                <Image
+                  className="w-full h-full object-cover"
+                  src={imageUrl[2]}
+                  alt="texas-food"
+                  fill
+                />
+              </div>
+              <ol className="list-decimal space-y-5 mt-10 px-5">
+                <li className="md:text-xl">
+                  <b>Kimchi</b>: A traditional Korean side dish made from
+                  fermented vegetables, most commonly cabbage. It is spicy,
+                  tangy, and packed with flavor.
+                </li>
+                <li className="md:text-xl">
+                  <b>Bibimbap</b>: A popular Korean dish consisting of a bowl of
+                  rice topped with various vegetables, meat (or tofu), and a
+                  fried egg. It is often served with gochujang (red chili paste)
+                  on the side.
+                </li>
+                <li className="md:text-xl">
+                  <b>Korean Barbecue (Gogi-gui)</b>: Enjoy the experience of
+                  grilling your own meat at the table. Choose from a variety of
+                  marinated or unmarinated meats such as bulgogi (marinated
+                  beef) or samgyeopsal (pork belly).
+                </li>
+                <li className="md:text-xl">
+                  <b>Tteokbokki</b>: Spicy rice cakes stir-fried with gochujang,
+                  fish cakes, and vegetables. It's a popular street food dish
+                  known for its chewy texture and fiery flavor.
+                </li>
+                <li className="md:text-xl">
+                  <b>Samgyetang</b>: A nutritious dish made of a whole young
+                  chicken stuffed with rice, ginseng, garlic, and jujube. It is
+                  simmered until the meat is tender and served as a hot soup.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div className="flex-1 h-fit sticky top-[120px] z-10  p-14 max-w-[650px] rounded-2xl text-white bg-primary-100">
+            <ul className="pb-[50px]  space-y-3 border-b border-gray-500">
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Accommodations</h6>
+                <p className="text-xl font-semibold ">$2800</p>
+              </li>
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Co-working Space</h6>
+                <p className="text-xl font-semibold ">$200</p>
+              </li>
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Private transfer</h6>
+                <p className="text-xl font-semibold ">$50</p>
+              </li>
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Community excursions</h6>
+                <p className="text-xl font-semibold ">$1750</p>
+              </li>
+            </ul>
+            <div className="flex items-center justify-between py-10">
+              <h4 className="text-xl md:text-3xl font-bold">Total Due:</h4>
+              <p className="text-2xl md:text-3xl font-bold">$4,800</p>
+            </div>
+            <ul className="space-y-10 mb-10">
+              <li className="flex items-center gap-5">
+                <div className="min-w-16 h-16 bg-primary-300 flex items-center justify-center rounded-md">
+                  <IoTimeOutline className="w-7 h-7" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="md:text-xl font-bold">Free cancellation</p>
+                  <span className="text-xs">Within 24 hours of booking</span>
+                </div>
+              </li>
+              <li className="flex items-center gap-5">
+                <div className="min-w-16 h-16 bg-primary-300 flex items-center justify-center rounded-md">
+                  <TbArrowsCross className="w-7 h-7" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="md:text-xl font-bold">No Change Fees</p>
+                  <span className="text-xs">
+                    Select a different trip free of charge.
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-center gap-5">
+                <div className="min-w-16 h-16 bg-primary-300 flex items-center justify-center rounded-md">
+                  <FiCreditCard className="w-7 h-7" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="md:text-xl font-bold">Payment plan</p>
+                  <span className="text-xs">
+                    Break up your payment into several installments.
+                  </span>
+                </div>
+              </li>
+            </ul>
+            <button className="w-full py-5 bg-primary-300 rounded-xl hover:opacity-70">
+              Book destination
+            </button>
+          </div>
+        </section>
+      </div>
+      <Newsletter />
+    </div>
+  );
+};
+
+export default Austin;

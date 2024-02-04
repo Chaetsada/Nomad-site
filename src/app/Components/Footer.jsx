@@ -22,11 +22,11 @@ const Footer = () => {
           <section className='flex-1 h-full'>
             <h5 className='text-white font-bold mb-5'>Destinations</h5>
             <div className='flex flex-col space-y-3'>
-             <Link className='text-gray-400 hover:text-white' href='/'>Seoul, Korea</Link>
-             <Link className='text-gray-400 hover:text-white' href='/'>Tokyo, Japan</Link>
-             <Link className='text-gray-400 hover:text-white' href='/'>Santorini, Greece</Link>
-             <Link className='text-gray-400 hover:text-white' href='/'>Positano, Italys</Link>
-             <Link className='text-gray-400 hover:text-white' href='/'>Bali, Indonesia</Link>
+             <Link className='text-gray-400 hover:text-white' href='/destinations/seoul-south-korea'>Seoul, Korea</Link>
+             <Link className='text-gray-400 hover:text-white' href='/destinations/tokyo-japan'>Tokyo, Japan</Link>
+             <Link className='text-gray-400 hover:text-white' href='/destinations/santorini-greece'>Santorini, Greece</Link>
+             <Link className='text-gray-400 hover:text-white' href='/destinations/positano-italy'>Positano, Italys</Link>
+             <Link className='text-gray-400 hover:text-white' href='/destinations/bali-indonesia'>Bali, Indonesia</Link>
             </div>
           </section>
           <section className='flex-1 h-full'>

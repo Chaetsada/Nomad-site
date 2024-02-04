@@ -1,5 +1,7 @@
 import React from 'react'
+//import swiper hook
 import { useSwiper } from "swiper/react";
+//import icon
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 

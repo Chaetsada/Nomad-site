@@ -2,10 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-
-import { featuresImages as images } from "../libs/data";
-
-import { FaArrowRight } from "react-icons/fa";
+//import component
+import ButtonLink from "./ButtonLink";
+//import data
+import { featuresImages as images } from "../Utils/data";
+//import icon
 import { IoHomeOutline } from "react-icons/io5";
 import { RiComputerLine } from "react-icons/ri";
 import { IoPersonOutline } from "react-icons/io5";
@@ -39,11 +40,9 @@ const Features = () => {
       <div className="container px-5">
         <header className="mb-14">
           <span className="text-primary-100 block mb-5">What’s included?</span>
-          <h2 className="text-primary-100 text-4xl md:text-6xl font-bold mb-8">Work remotely. Travel the world.</h2>
-            <Link className="w-fit flex items-center text-primary-100 gap-3 hover:underline " href="/">
-              <span className="bg-primary-100 text-white w-[40px] h-[40px] rounded-full flex  justify-center items-center ">
-                  <FaArrowRight className="w-3 h-3" />               
-              </span>
+          <h2 className="text-primary-100 text-4xl font-cal md:text-6xl font-bold mb-8">Work remotely. Travel the world.</h2>
+            <Link href="/about" className="flex items-center gap-3 group">
+              <ButtonLink/>
               Learn how it works
             </Link>
         </header>

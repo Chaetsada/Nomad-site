@@ -1,9 +1,11 @@
 'use client'
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+//import component
 import Newsletter from "../Components/Newsletter";
-import { teamMembers } from "../libs/data";
+//import data
+import { teamMembers } from "../Utils/data";
 
 const About = () => {
   const ref = useRef(null);
@@ -14,8 +16,8 @@ const About = () => {
 
   const h1 = useTransform(scrollYProgress,[0.1,0.2],['0','100%']);
   const h2 = useTransform(scrollYProgress,[0.25,0.4],['0','100%']);
-  const h3 = useTransform(scrollYProgress,[0.4,0.6],['0','100%']); //ACCOMUDATION
-  const h4 = useTransform(scrollYProgress,[0.6,0.7],['0','100%']);//CO-WORKING
+  const h3 = useTransform(scrollYProgress,[0.4,0.6],['0','100%']); 
+  const h4 = useTransform(scrollYProgress,[0.6,0.7],['0','100%']);
   const h5 = useTransform(scrollYProgress,[0.75,0.85 ],['0','100%']);
   const h6 = useTransform(scrollYProgress,[0.85,1],['0','100%']);
 
@@ -41,13 +43,11 @@ const About = () => {
     },
   }
 
-  
-
   return (
     <div className="min-h-screen bg-main">
       <div className="container px-3">
         <div className=" pt-[130px] pb-20">
-          <h1 className="text-4xl md:text-[150px] text-primary-100 font-bold text-center leading-[90%] tracking-wide mb-5">
+          <h1 className="text-4xl md:text-[150px] text-primary-100 font-bold font-cal text-center leading-[90%] tracking-wide mb-5">
             What is nomad?
           </h1>
           <div className="h-[300px] md:h-[700px] w-full relative">
@@ -71,7 +71,7 @@ const About = () => {
 
         <section className="min-h-fit flex flex-col gap-[80px]  ">
           <header className="flex justify-start ">
-            <h2 className="text-4xl md:text-6xl font-bold max-w-2xl ">
+            <h2 className="text-4xl font-cal md:text-6xl font-bold max-w-2xl ">
               What to expect after booking...
             </h2>
           </header>
@@ -299,7 +299,7 @@ const About = () => {
           <div className="w-[33%] h-fit md:h-screen md:sticky top-[150px] flex flex-col items-start gap-5">
             <div className="flex flex-col gap-8 mb-5">
               <small className="text-xl">Our team</small>
-              <h3 className="text-5xl font-bold">Meet your <br /> leaders</h3>
+              <h3 className="text-5xl font-bold font-cal">Meet your <br /> leaders</h3>
             </div>
               <p className="max-w-xl text-xl">Local, friendly staff members here to support you on your adventures.</p>
           </div>

@@ -2,8 +2,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { mostPopularImage as images } from "../libs/data";
-import { FaArrowRight } from "react-icons/fa";
+//import component
+import ButtonLink from "./ButtonLink";
+//import data
+import { mostPopularImage as images } from "../Utils/data";
+
 
 const Popular = () => {
   const [isHovered, setIsHovered] = useState('');
@@ -29,16 +32,14 @@ const Popular = () => {
       <section className="container">
         <header className="mb-20 ">
           <span className="text-primary-100 block mb-5">Destinations</span>
-          <h2 className="text-primary-100 text-4xl md:text-6xl font-bold mb-8">
+          <h2 className="text-primary-100 text-4xl md:text-6xl font-bold font-cal mb-8">
             Our most popular destinations
           </h2>
           <Link
-            className="flex items-center text-primary-100 gap-3 hover:underline"
-            href="/"
+            className="flex items-center gap-3 group"
+            href="/destinations"
           >
-            <span className="bg-primary-100 text-white w-[40px] h-[40px] rounded-full flex  justify-center items-center ">
-              <FaArrowRight className="w-3 h-3" />
-            </span>
+            <ButtonLink />
             View all destinations
           </Link>
         </header>
@@ -56,6 +57,7 @@ const Popular = () => {
               </h4>
               <motion.img               
                 variants={animVarient}
+                initial='initial'
                 animate={isHovered === item.id ? 'hover':'initial'}
                 transition={{ type: "spring" }}
                 className="absolute z-20 -top-16 left-1/2 rounded-lg object-cover shadow-2xl w-23 h-32 md:h-72 md:w-80"

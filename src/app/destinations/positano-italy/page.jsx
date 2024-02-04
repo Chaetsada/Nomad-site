@@ -1,9 +1,241 @@
-import React from 'react'
+import Image from "next/image";
+import React from "react";
+//import component
+import Newsletter from "@/app/Components/Newsletter";
+//import icon
+import { FaRegSmile } from "react-icons/fa";
+import { MdOutlineWbSunny } from "react-icons/md";
+import { IoTimeOutline } from "react-icons/io5";
+import { PiMoneyLight } from "react-icons/pi";
+import { TbArrowsCross } from "react-icons/tb";
+import { FiCreditCard } from "react-icons/fi";
 
-const page = () => {
+const imageUrl = [
+  "https://images.unsplash.com/photo-1594881497142-08fdfdfc4074?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1560189236-71c235494695?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
+
+const Positano = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="min-h-screen bg-main">
+      <div className="container pt-[110px] px-5 mb-20">
+        <header className="h-[720px] w-full mb-10 relative rounded-2xl overflow-hidden ">
+          <Image
+            className="w-full h-full object-cover "
+            src={imageUrl[0]}
+            alt="Positano-image"
+            fill
+          />
+          <div className="absolute bottom-0 z-10 p-5 md:p-20 text-white w-full flex flex-col gap-5 bg-gradient-to-t from-[#0005] to-[#0000]">
+            <h3 className="text-4xl md:text-6xl font-bold ">
+              Positano, Italy
+            </h3>
+            <p className="text-xl font-semibold">
+              Next trip: <span>Jun 1, 2023 - jun 14, 2023</span>
+            </p>
+          </div>
+        </header>
 
-export default page
+        <section className="grid md:grid-cols-4 gap-5 h-fit md:h-[180px] mt-[100px]">
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <FaRegSmile className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>National Language</p>
+              <span className="text-xl font-bold text-black">Italian</span>
+            </div>
+          </div>
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <MdOutlineWbSunny className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>Weather</p>
+              <span className="text-xl font-bold text-black">
+                85° F / 56° F
+              </span>
+            </div>
+          </div>
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <IoTimeOutline className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>Time zone</p>
+              <span className="text-xl font-bold text-black">GMT+2</span>
+            </div>
+          </div>
+          <div className="h-full p-8 rounded-2xl flex flex-col gap-5 items-center bg-secondary-100">
+            <PiMoneyLight className="text-4xl text-black" />
+            <div className="flex flex-col items-center gap-1">
+              <p>Currency</p>
+              <span className="text-xl font-bold text-black">Italian Lire</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row gap-14 mt-[100px] relative">
+          <div className="flex-1 min-h-fit mb-10">
+            <div className="flex flex-col gap-10">
+              <h3 className="text-5xl font-bold font-cal ">Infomation</h3>
+              <p className=" md:text-xl text-balance ">
+                Positano is a picturesque village nestled along the stunning
+                Amalfi Coast in southern Italy. Known for its dramatic cliffside
+                setting and pastel-colored buildings cascading down to the
+                sparkling waters of the Tyrrhenian Sea, Positano is often
+                considered one of the most beautiful and romantic destinations
+                in the world.
+              </p>
+            </div>
+            {/* RECOMMENDED ACTIVITIES */}
+            <div className="mt-20 ">
+              <h4 className="text-4xl font-bold mb-10 font-cal">
+                Recommended Activities
+              </h4>
+              <div className="h-[480px] w-full relative rounded-2xl overflow-hidden">
+                <Image
+                  className="w-full h-full object-cover"
+                  src={imageUrl[1]}
+                  alt="Positano-image"
+                  fill
+                />
+              </div>
+              <ol className="list-decimal space-y-5 mt-10 px-5">
+                <li className="md:text-xl">
+                  <b> Explore the Beaches</b>:Spend some time relaxing on the
+                  main beach, Spiaggia Grande, which offers stunning views of
+                  the town. You can also visit Fornillo Beach, a smaller and
+                  quieter alternative.
+                </li>
+                <li className="md:text-xl">
+                  <b>Hike the Path of the Gods</b>: This stunning trail offers
+                  incredible panoramic views of the coastline and takes you
+                  through picturesque villages and lush Mediterranean
+                  vegetation.
+                </li>
+                <li className="md:text-xl">
+                  <b>Visit the Church of Santa Maria Assunta</b>: Located in the
+                  heart of Positano, the Church of Santa Maria Assunta is a
+                  must-visit. Admire its beautiful dome, stunning interior, and
+                  the famous Byzantine icon of the Black Madonna.
+                </li>
+                <li className="md:text-xl">
+                  <b>Visit the Franco Senesi Ceramics</b>:Visit the Franco
+                  Senesi Ceramics workshop to see local artisans at work and
+                  browse their exquisite pottery and ceramic creations.
+                </li>
+                <li className="md:text-xl">
+                  <b> Take a Day Trip to Amalfi and Ravello</b>: Consider taking
+                  a day trip to the nearby towns of Amalfi and Ravello, where
+                  you can explore their beautiful architecture, gardens, and
+                  historic sites.
+                </li>
+              </ol>
+            </div>
+            {/* MUST TRY FOOD */}
+            <div className="mt-20">
+              <h4 className="text-4xl font-bold mb-10 font-cal">
+                Must-try food
+              </h4>
+              <div className="h-[480px] w-full relative rounded-2xl overflow-hidden">
+                <Image
+                  className="w-full h-full object-cover"
+                  src={imageUrl[2]}
+                  alt="italien-food"
+                  fill
+                />
+              </div>
+              <ol className="list-decimal space-y-5 mt-10 px-5">
+                <li className="md:text-xl">
+                  <b>Spaghetti alle Vongole</b>: This classic Italian pasta dish
+                  features spaghetti cooked with clams, garlic, olive oil, white
+                  wine, and sometimes cherry tomatoes.
+                </li>
+                <li className="md:text-xl">
+                  <b>Limoncello</b>: Positano is famous for its lemon trees and
+                  the production of limoncello, a lemon liqueur. Made from the
+                  zest of lemons, alcohol, sugar, and water, it's a tangy and
+                  sweet digestif that is often served chilled after a meal.
+                </li>
+                <li className="md:text-xl">
+                  <b> Frittura di Paranza</b>: This is a mixed seafood fry that
+                  typically includes a variety of small fish, such as anchovies,
+                  shrimp, calamari, and small sardines.
+                </li>
+                <li className="md:text-xl">
+                  <b>Ravioli Caprese</b>: This local specialty features fresh
+                  ravioli stuffed with creamy ricotta cheese and served with a
+                  rich tomato sauce and fresh basil.
+                </li>
+                <li className="md:text-xl">
+                  <b>Delizia al Limone</b>: Positano offers a delightful dessert
+                  called Delizia al Limone, a sponge cake soaked in limoncello
+                  liqueur, layered with lemon cream, and topped with lemon zest.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div className="flex-1 h-fit sticky top-[120px] z-10  p-14 max-w-[650px] rounded-2xl text-white bg-primary-100">
+            <ul className="pb-[50px]  space-y-3 border-b border-gray-500">
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Accommodations</h6>
+                <p className="text-xl font-semibold ">$2000</p>
+              </li>
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Co-working Space</h6>
+                <p className="text-xl font-semibold ">$300</p>
+              </li>
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Private transfer</h6>
+                <p className="text-xl font-semibold ">$50</p>
+              </li>
+              <li className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+                <h6 className="text-xl font-semibold">Community excursions</h6>
+                <p className="text-xl font-semibold ">$850</p>
+              </li>
+            </ul>
+            <div className="flex items-center justify-between py-10">
+              <h4 className="text-xl md:text-3xl font-bold">Total Due:</h4>
+              <p className="text-2xl md:text-3xl font-bold">$3200</p>
+            </div>
+            <ul className="space-y-10 mb-10">
+              <li className="flex items-center gap-5">
+                <div className="min-w-16 h-16 bg-primary-300 flex items-center justify-center rounded-md">
+                  <IoTimeOutline className="w-7 h-7" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="md:text-xl font-bold">Free cancellation</p>
+                  <span className="text-xs">Within 24 hours of booking</span>
+                </div>
+              </li>
+              <li className="flex items-center gap-5">
+                <div className="min-w-16 h-16 bg-primary-300 flex items-center justify-center rounded-md">
+                  <TbArrowsCross className="w-7 h-7" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="md:text-xl font-bold">No Change Fees</p>
+                  <span className="text-xs">
+                    Select a different trip free of charge.
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-center gap-5">
+                <div className="min-w-16 h-16 bg-primary-300 flex items-center justify-center rounded-md">
+                  <FiCreditCard className="w-7 h-7" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="md:text-xl font-bold">Payment plan</p>
+                  <span className="text-xs">
+                    Break up your payment into several installments.
+                  </span>
+                </div>
+              </li>
+            </ul>
+            <button className="w-full py-5 bg-primary-300 rounded-xl hover:opacity-70">
+              Book destination
+            </button>
+          </div>
+        </section>
+      </div>
+      <Newsletter />
+    </div>
+  );
+};
+
+export default Positano;

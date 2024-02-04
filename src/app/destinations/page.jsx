@@ -1,10 +1,12 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { CiCalendar } from "react-icons/ci";
+//import component
 import Newsletter from "../Components/Newsletter";
-
-import { oneWeekTrip,twoWeekTrip,oneMonthTrip } from "../libs/data";
+//import data
+import { oneWeekTrip,twoWeekTrip,oneMonthTrip } from "../Utils/data";
+//import icon
+import { CiCalendar } from "react-icons/ci";
 
 
 const Destinations = () => {

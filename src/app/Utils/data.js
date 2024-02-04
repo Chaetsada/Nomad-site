@@ -1,4 +1,4 @@
-//Home Page
+// Home page
 export const headerImages = [
     {
         'city': 'japan',
@@ -79,7 +79,7 @@ export const testimonialsImages = [
     },
 ] 
 
-//About Page
+//About page
 export const teamMembers = [
     {
         name:'Minho Park',
@@ -123,7 +123,7 @@ export const teamMembers = [
     },
 ]
 
-//Destination Page
+// Destination page plan trips
 export const oneWeekTrip = [
     {
       city: "Seoul,South Korea",

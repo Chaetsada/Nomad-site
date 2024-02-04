@@ -1,14 +1,15 @@
 'use client'
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { testimonialsImages as images } from '../libs/data';
-import { BsFillChatSquareQuoteFill } from "react-icons/bs";
-import { FaStar } from "react-icons/fa";
-
+import Image from 'next/image';
+//import swiper js
 import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
 import 'swiper/css';
-import Image from 'next/image';
+//import data
+import { testimonialsImages as images } from '../Utils/data';
+//import icon
+import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 
 const Testimonial = () => {
   return (
