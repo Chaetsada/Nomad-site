@@ -41,7 +41,7 @@ const Footer = () => {
         </main>
         <div className='flex flex-col md:flex-row justify-between py-5'>
           <h4>Developed by chaetsada kulawong</h4>
-          <h4>with Next.js and Tailwind</h4>
+          <h4>with Next.js Tailwind and Vercel</h4>
         </div>
       </div>
     </footer>

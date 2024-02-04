@@ -36,8 +36,8 @@ const Features = () => {
   },[index])
   
   return (
-    <main className="min-h-fit md:h-screen mb-20 md:mb-0">
-      <div className="container px-5">
+    <main className="h-fit md:h-screen mb-20 md:mb-0">
+      <div className="container p-5">
         <header className="mb-14">
           <span className="text-primary-100 block mb-5">What’s included?</span>
           <h2 className="text-primary-100 text-4xl font-cal md:text-6xl font-bold mb-8">Work remotely. Travel the world.</h2>
