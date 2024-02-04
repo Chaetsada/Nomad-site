@@ -10,7 +10,7 @@ import SwiperButton from "./SwiperButton";
 
 const Header = () => {
   return (
-    <div className="h-screen ">
+    <div className="h-screen">
       <div className="pt-[130px] pb-[80px] container px-5 h-full">
         <Swiper
           modules={[Autoplay]}
@@ -36,7 +36,7 @@ const Header = () => {
 
           <div className="w-full h-full absolute top-0 left-0 z-10 rounded-2xl bg-gradient-to-t from-[#0009] to-[#0000]" />
 
-          <div className="absolute bottom-20 left-10 z-20 flex flex-col gap-5">
+          <div className="absolute bottom-32 px-4 md:bottom-20 md:left-10 z-20 flex flex-col gap-5">
             <h2 className="text-white text-3xl font-cal md:text-6xl font-bold">
               Work from anywhere.
             </h2>

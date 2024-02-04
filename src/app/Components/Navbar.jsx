@@ -9,7 +9,7 @@ import { FaArrowRight } from "react-icons/fa";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <main className="fixed top-0 w-full z-[99] bg-main p-5 md:py-[32px] md:px-[92px] ">
+    <div className="fixed top-0 w-full z-[99] bg-main p-5 md:py-[32px] md:px-[92px] ">
       <div className="flex justify-between items-center relative">
         <Link href='/'>
           <h2 className="text-primary-100 text-3xl font-bold">nomad.</h2>
@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </main>
+    </div>
   );
 };
 

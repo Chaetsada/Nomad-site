@@ -28,8 +28,8 @@ const Popular = () => {
   }
 
   return (
-    <main className="min-h-screen px-5">
-      <section className="container">
+    <div className="min-h-fit ">
+      <div className="container px-5 pb-[100px]">
         <header className="mb-20 ">
           <span className="text-primary-100 block mb-5">Destinations</span>
           <h2 className="text-primary-100 text-4xl md:text-6xl font-bold font-cal mb-8">
@@ -60,15 +60,15 @@ const Popular = () => {
                 initial='initial'
                 animate={isHovered === item.id ? 'hover':'initial'}
                 transition={{ type: "spring" }}
-                className="absolute z-20 -top-16 left-1/2 rounded-lg object-cover shadow-2xl w-23 h-32 md:h-72 md:w-80"
+                className="hidden md:block absolute z-20 -top-16 left-1/2 rounded-lg object-cover shadow-2xl w-23 h-32 md:h-72 md:w-80"
                 src={item.img}
                 alt={item.city}
               />
             </div>
           ))}
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 };
 
